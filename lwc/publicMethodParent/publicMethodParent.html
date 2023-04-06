@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Public Method Example with Checkbox Group">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12" padding="around-medium">
+                <p>Add the Checkbox value in the input box and that should dynamically check the respective checkbox</p>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium">
+                <div class="slds-p-top_medium">
+                <lightning-input value={value} onchange={inputHandler} label="Checkbox name" placeholder="Enter any checkbox value (red, green, blue, black, white)"></lightning-input>
+                </div>
+                <div class="slds-p-top_medium">
+                    <lightning-button label="Update Checkbox" onclick={updateCheckboxHandler}></lightning-button>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium">
+                <p style="color: chartreuse;"><b>{returnMessage}</b></p>
+            </lightning-layout-item>            
+            <lightning-layout-item size="12" padding="around-medium">
+                <c-public-method-child></c-public-method-child>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

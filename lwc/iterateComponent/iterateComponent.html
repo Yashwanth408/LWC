@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="City Names">
+        <div style="padding:4px 4px 4px 4px;">
+            <lightning-input label="City Name" type="text" class="input-text"></lightning-input>
+            <br>
+            <lightning-button type="submit" label="Add City" onclick={addCity}></lightning-button>
+        </div>
+        
+        <template for:each={cityList} for:item="city">
+            <div key={city} style="padding:4px 4px 4px 4px;"> 
+                <p class="font">{city} </p>
+                <lightning-button type="submit" value={city} label="Remove this City" onclick={removeCity}></lightning-button>
+            </div> 
+        </template>
+    </lightning-card>
+</template>

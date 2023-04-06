@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Task List">
+        <lightning-layout multiple-rows="true">
+            <template for:each={taskDetailsList} for:item="task">
+                <lightning-layout-item key={task.taskName} size="12" padding="around-medium" style="background: yellow;">
+                    <c-task-component task-details={task}>
+                        <lightning-tile label={task.taskName} href="/path/to/somewhere" slot="namedTask">
+                            <p class="slds-truncate">{task.taskDescription}</p>
+                        </lightning-tile>
+                        <div>
+                            <p> Holaa!! I'm the text from unnamed Slot</p>
+                        </div>
+                    </c-task-component>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </lightning-card>
+</template>

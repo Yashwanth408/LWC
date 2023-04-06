@@ -1,0 +1,8 @@
+.color-class {
+    background: pink;
+    padding: 10px 10px 10px 10px;
+}
+
+:host {
+    border: 5px solid Green;
+}

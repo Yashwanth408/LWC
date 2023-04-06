@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Conditional Rendering - Show text if the checkbox is checked">
+        <div>
+            <lightning-input type="checkbox" onchange={displayDivHandler}></lightning-input>
+        </div>
+
+        <div>
+            <template if:true={check}>
+                <div>I'm visible</div>
+            </template>
+            <template if:false={check}>
+                <div>Make me True</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
